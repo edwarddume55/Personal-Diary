@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior:  auto|smooth|initial|inherit;;
 }
 
 body {
@@ -99,10 +100,29 @@ input[type="submit"] {
     font-weight: bold;
     min-width: 8rem;
 }
+.right{
+    float: right;
+    margin-top: 5px;
+}
 
 /* Day coloring */
 
 .Saturday,
 .Sunday {
     background-color: lightsalmon;
+}
+
+/* Messages */
+
+.messages {
+    padding: 0;
+    list-style: none;
+}
+
+.message {
+    width: 100%;
+    background: lightblue;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
 }

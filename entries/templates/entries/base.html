@@ -10,9 +10,24 @@
 
 <body>
     <div class="container">
+    <a  class="right" href="{% url 'entry-create' %}"><button>Add new entry</button></a>
     <h1><a href="/">My Personal diary</a></h1>
+
         <hr>
-    {% block content %}{% endblock %}
+        {% if messages %}
+    <ul class="messages">
+    {% for message in messages %}
+        <li class="message">
+            {{ message }}
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+    {% block content %}
+    {% endblock %}
+
+    <hr>
+<a href="{% url 'admin:logout' %}"><button> Logout</button></a>
 </div>
 </body>
 
